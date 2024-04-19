@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenFinal_JonathanMarley.Views.PaginaPrincipal"
+              BackgroundImageSource="fondo.png">
+    
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Limpiar" IconImageSource="restart_ico" Clicked="OnBtnLimpiarClicked"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+        <StackLayout Spacing="15" Padding="15">
+
+            <Frame Padding="0" WidthRequest="170" HeightRequest="250">
+                <StackLayout>
+                    <Image x:Name="imgFoto"
+                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        HeightRequest="180"
+                        BackgroundColor="White"/>
+
+                    <Button ImageSource="photo_ico.png"
+                        Clicked="OnBtnFotoClicked"
+                            WidthRequest="180"
+                            HeightRequest="60"
+                            BackgroundColor="#9200B9"
+                        CornerRadius="20"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Padding="0">
+                <StackLayout>
+                    <Label Text="Nota de Voz:" Margin="5, 5, 0, 0"/>
+                    <Button x:Name="btnBtnStartRecording"
+                         ImageSource="microphone_ico.png"
+                        Clicked="OnBtnStartRecordingClicked"
+                        CornerRadius="0"
+                        BackgroundColor="#9200B9"
+                        VerticalOptions="End"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame CornerRadius="10" Padding="5" HeightRequest="140">
+                <StackLayout>
+                    <Label Text="Descripcion" />
+                    <Editor x:Name="txtDescripcion" Keyboard="Chat" HeightRequest="120"/>
+                </StackLayout>
+            </Frame>
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Spacing="5">
+                <Button Text="Guardar Datos"
+                    Clicked="OnBtnGuardarClicked"
+                   BackgroundColor="#9200B9"
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Button Text="Lista Guardadas"
+                    Clicked="OnBtnListaClicked"
+                    BackgroundColor="#9200B9"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

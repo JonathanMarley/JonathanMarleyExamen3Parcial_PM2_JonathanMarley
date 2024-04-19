@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenFinal_JonathanMarley.Views.Detalle"
+              BackgroundImageSource="fondo.png">
+    <StackLayout Spacing="15" Padding="25">
+
+        <Label x:Name="lblDescripcion" 
+               Text="{Binding Descripcion}"
+               HeightRequest="150" 
+               BackgroundColor="white"/>
+
+
+        <Button 
+            Text="Ver Imagen"
+            BackgroundColor="#9200B9"
+            Clicked="OnBtnPictureClicked"/>
+
+
+        <Button 
+            Text="Reproducir Audio"
+            x:Name="btnPlay"
+            BackgroundColor="#9200B9"
+            Clicked="OnBtnPlayClicked"/>
+
+
+        <Button 
+            Text="Actualizar"
+            BackgroundColor="#9200B9"
+            Clicked="OnBtnEditClicked"/>
+
+
+        <Button 
+            Text="Eliminar"
+            BackgroundColor="#9200B9"
+            VerticalOptions="EndAndExpand"
+            Clicked="OnBtnDeleteClicked"/>
+
+
+    </StackLayout>
+</ContentPage>
